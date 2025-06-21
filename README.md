@@ -19,5 +19,5 @@ I'm a passionate fullstack developer from Indonesia, currently focused on buildi
 
 ## 📫 Let's Connect
 
-- 📧 Email: [jeflijonathan@gmail.com](mailto:jeflijonathan@gmail.com)
+- 📧 Email: [jeflyjonathan1@gmail.com](mailto:jeflijonathan@gmail.com)
 - 💼 LinkedIn: [linkedin.com/in/jeflijonathan](https://linkedin.com/in/jeflijonathan)
