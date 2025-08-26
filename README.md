@@ -1,6 +1,6 @@
 # 👋 Hi there, I'm Jefli Jonathan!
 
-I'm a passionate fullstack developer from Indonesia, currently focused on building beautiful and functional web applications with **React**, **TailwindCSS**, **Laravel**, and **MongoDB**.
+I'm a passionate fullstack developer from Indonesia, currently focused on building beautiful and functional web applications with **React**, **TailwindCSS**, and **Laravel**.
 
 ---
 
