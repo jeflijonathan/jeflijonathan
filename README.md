@@ -16,8 +16,9 @@ Here are the tools and technologies I work with every day:
 
 ## 📈 GitHub Stats
 
-![Jefli's GitHub Stats](https://github-readme-stats.vercel.app/api?username=jeflijonathan&show_icons=true&theme=radical&hide_border=true)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=jeflijonathan&layout=compact&theme=radical&hide_border=true)
+https://github.com/PencilNavigator/readme-stats-URL/
+![Jefli's GitHub Stats](https://github.com/PencilNavigator/readme-stats-URL/api?username=jeflijonathan&show_icons=true&theme=radical&hide_border=true)  
+![Top Languages](https://github.com/PencilNavigator/readme-stats-URL/api/top-langs/?username=jeflijonathan&layout=compact&theme=radical&hide_border=true)
 
 ---
 
