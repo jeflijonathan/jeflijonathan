@@ -15,7 +15,7 @@ Here are the tools and technologies I work with every day:
 ---
 
 ![Statistik GitHub Jefli](https://github-readme-stats-u73r.vercel.app/api?username=jeflijonathan&show_icons=true&theme=tokyonight)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=jeflijonathan&layout=compact&theme=tokyonight)
+![Top Languages](https://github-readme-stats-u73r.vercel.app/api/top-langs/?username=jeflijonathan&layout=compact&theme=tokyonight)
 ## 🌐 Connect With Me
 
 I'm always open to collaboration, new ideas, or just a good tech chat. Let’s connect!
