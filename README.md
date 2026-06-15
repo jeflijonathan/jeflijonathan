@@ -31,12 +31,9 @@ Bagi saya, _coding_ bukan hanya tentang menulis baris perintah, melainkan tentan
   <img src="https://github-readme-stats-u73r.vercel.app/api?username=jeflijonathan&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&height=165" width="48%" alt="Statistik GitHub Jefli" />
   <img src="https://github-readme-stats-u73r.vercel.app/api/top-langs/?username=jeflijonathan&layout=compact&theme=tokyonight&hide_border=true&height=165" width="48%" alt="Top Languages" />
 </p>
+
 <p align="center">
-  <!-- Baris 2: Grafik Aktivitas Mingguan (100% Aman & Stabil) -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jeflijonathan&theme=tokyonight&hide_border=true" width="97%" alt="Grafik Aktivitas Jefli" />
-</p>
-<p align="center">
-  <img src="github-space-shooter.gif" width="100%" alt="Space Shooter Game" />
+  <img src="https://raw.githubusercontent.com/jeflijonathan/jeflijonathan/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Snake Game" />
 </p>
 ---
 
