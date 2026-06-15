@@ -8,16 +8,20 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions: # Tambahkan blok ini untuk memberikan izin eksplisit
+      contents: write
     steps:
       - name: generate-gh-space-shooter
         uses: czl9707/gh-space-shooter@v2.0.2
         with:
           github_user_name: ${{ github.repository_owner }}
+          # Kita gunakan output branch yang lebih simpel
+          output_branch: output
+          output_directory: dist
 
       - name: Deploy to Output Branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./dist
