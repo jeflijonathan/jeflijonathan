@@ -1,30 +1,54 @@
-# 👋 Hey there, I'm **Jefli Jonathan**!
+# 👋 Halo, Saya Jefli Jonathan!
+### 🚀 Fullstack Web Developer | UI/UX Enthusiast
 
-🎯 I'm a passionate **Fullstack Web Developer** from **Indonesia**, with a strong focus on crafting elegant and high-performing web applications using **React**, **TailwindCSS**, and **Laravel**.
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=jeflijonathan&label=Profile%20Views&color=0e7561&style=flat-square" alt="Views" />
+</p>
 
-I love turning ideas into real, scalable digital experiences — clean code, beautiful UI, and seamless UX are my playground. 🚀
+Saya seorang **Fullstack Web Developer** asal Indonesia yang berfokus pada pembangunan aplikasi web yang responsif, berkinerja tinggi, dan berdampak nyata. Saya menggabungkan logika *backend* yang kuat menggunakan **Laravel & Node.js** dengan antarmuka *frontend* yang interaktif menggunakan **React & TailwindCSS**.
 
----
-
-## 🛠️ Tech Stack
-
-Here are the tools and technologies I work with every day:
-
-![Tech Stack](https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,php,laravel,mysql,mongodb,nodejs,git)
+Bagi saya, *coding* bukan hanya tentang menulis baris perintah, melainkan tentang memecahkan masalah dan menciptakan pengalaman digital yang mulus bagi pengguna. ✨
 
 ---
 
-![Statistik GitHub Jefli](https://github-readme-stats-u73r.vercel.app/api?username=jeflijonathan&show_icons=true&theme=tokyonight)
-![Top Languages](https://github-readme-stats-u73r.vercel.app/api/top-langs/?username=jeflijonathan&layout=compact&theme=tokyonight)
-## 🌐 Connect With Me
+## 🛠️ Tech Stack & Perkakas
 
-I'm always open to collaboration, new ideas, or just a good tech chat. Let’s connect!
+### Frontend & Backend
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,php,laravel,nodejs)](https://skillicons.dev)
 
-- 📧 **Email**: [jeflyjonathan1@gmail.com](mailto:jeflyjonathan1@gmail.com)  
-- 💼 **LinkedIn**: [linkedin.com/in/jeflijonathan](https://linkedin.com/in/jeflijonathan)
+### Database, Version Control & Tools
+[![My Skills](https://skillicons.dev/icons?i=mysql,postgres,mongodb,redis,git,figma)](https://skillicons.dev)
 
 ---
 
-## 🧠 Fun Fact
+## GitHub Analytics
+<p align="center">
+  <!-- Baris 1: Dua Kartu Berdampingan dengan Tinggi yang Dikunci Sama -->
+  <img src="https://github-readme-stats-u73r.vercel.app/api?username=jeflijonathan&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&height=165" width="48%" alt="Statistik GitHub Jefli" />
+  <img src="https://github-readme-stats-u73r.vercel.app/api/top-langs/?username=jeflijonathan&layout=compact&theme=tokyonight&hide_border=true&height=165" width="48%" alt="Top Languages" />
+</p>
+<p align="center">
+  <!-- Baris 2: Grafik Aktivitas Mingguan (100% Aman & Stabil) -->
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jeflijonathan&theme=tokyonight&hide_border=true" width="97%" alt="Grafik Aktivitas Jefli" />
+</p>
+![Example Game](example.gif)
+---
 
-> “I don't just write code — I solve problems and build experiences.”
+## 🌐 Hubungi Saya
+
+Mari berkolaborasi, bertukar ide, atau sekadar berdiskusi tentang teknologi terbaru!
+
+<p align="left">
+  <a href="mailto:jeflyjonathan1@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://linkedin.com/in/jeflijonathan" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+</p>
+
+---
+
+## 🧠 Kutipan Favorit
+
+> *"I don't just write code — I solve problems and build seamless experiences."*
