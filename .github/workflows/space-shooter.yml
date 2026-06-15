@@ -2,8 +2,8 @@ name: Generate Space Shooter Graph
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Berjalan otomatis setiap tengah malam
-  workflow_dispatch: # Tombol manual
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -11,36 +11,35 @@ jobs:
     permissions:
       contents: write
     steps:
-      # Langkah 1: Ambil repositori utama Anda
+      # Langkah 1: Ambil ruang kerja dasar
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Langkah 2: Setup Python versi stabil
+      # Langkah 2: Setup Python (Sudah diperbaiki parameternya)
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-python-version: "3.10"
+          python-version: "3.10"
 
-      # Langkah 3: Install library grafis secara aman
+      # Langkah 3: Sediakan library gambar
       - name: Install Dependencies
         run: |
           pip install requests pillow
 
-      # Langkah 4: Ambil script generator space shooter yang sudah diperbaiki langsung dari CDN aman
+      # Langkah 4: Ambil engine game space shooter milik czl9707
       - name: Fetch Space Shooter Generator
         run: |
           curl -s https://raw.githubusercontent.com/czl9707/gh-space-shooter/main/src/gh_space_shooter/main.py -o space_shooter.py
-          # Memperbaiki bug path internal script bawaan czl9707 agar adaptif dengan GitHub runner
           sed -i 's/src\/gh_space_shooter\///g' space_shooter.py
 
-      # Langkah 5: Jalankan proses pembuatan animasi game pesawat tempur
+      # Langkah 5: Tembak proses pembuatan animasi pesawat
       - name: Generate Simulation
         run: |
           python space_shooter.py --username ${{ github.repository_owner }} --output-path ./github-space-shooter.gif
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Langkah 6: Gunakan deployer standar untuk memasukkan hasilnya ke branch 'output'
+      # Langkah 6: Amankan file GIF ke branch output
       - name: Deploy to Output Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
