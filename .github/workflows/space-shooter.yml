@@ -11,22 +11,22 @@ jobs:
     permissions:
       contents: write
     steps:
-      # Langkah 1: Ambil repositori Anda
+      # Langkah 1: WAJIB Checkout agar container memiliki ruang kerja dasar
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Langkah 2: Jalankan generator space shooter asli ke folder root (./)
+      # Langkah 2: Jalankan space shooter dengan argumen resmi (menggunakan strip '-')
       - name: generate-gh-space-shooter
         uses: czl9707/gh-space-shooter@v2.0.2
         with:
           username: ${{ github.repository_owner }}
           output-path: ./github-space-shooter.gif
 
-      # Langkah 3: Push file GIF langsung ke branch main Anda
-      - name: Commit and Push Update
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add github-space-shooter.gif || true
-          git commit -m "chore: update space shooter animation [skip ci]" || true
-          git push origin ${{ github.ref_name }} || true
+      # Langkah 3: Gunakan action deploy standar agar tidak bentrok masalah token/izin push
+      - name: Deploy to Output Branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./
+          destination_dir: ./
