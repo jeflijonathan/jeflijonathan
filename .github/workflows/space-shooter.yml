@@ -8,20 +8,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: # Tambahkan blok ini untuk memberikan izin eksplisit
+    permissions:
       contents: write
     steps:
+      # Langkah 1: Checkout repositori utama Anda
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Langkah 2: Generate game langsung ke root folder repositori
       - name: generate-gh-space-shooter
         uses: czl9707/gh-space-shooter@v2.0.2
         with:
           github_user_name: ${{ github.repository_owner }}
-          # Kita gunakan output branch yang lebih simpel
-          output_branch: output
-          output_directory: dist
+          output_branch: ${{ github.ref_name }} # Simpan langsung di branch saat ini (main)
+          output_directory: ./
 
-      - name: Deploy to Output Branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: output
-          publish_dir: ./dist
+      # Langkah 3: Commit dan Push kembali file yang terbuat ke branch utama
+      - name: Commit and Push Update
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-space-shooter.gif || true
+          git commit -m "chore: update space shooter animation [skip ci]" || true
+          git push origin ${{ github.ref_name }} || true

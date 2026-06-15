@@ -36,7 +36,7 @@ Bagi saya, _coding_ bukan hanya tentang menulis baris perintah, melainkan tentan
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=jeflijonathan&theme=tokyonight&hide_border=true" width="97%" alt="Grafik Aktivitas Jefli" />
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jeflijonathan/jeflijonathan/output/github-space-shooter.gif" width="100%" alt="Space Shooter Game" />
+  <img src="github-space-shooter.gif" width="100%" alt="Space Shooter Game" />
 </p>
 ---
 
