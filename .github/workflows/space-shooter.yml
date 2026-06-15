@@ -14,14 +14,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Menggunakan platane/snk yang terverifikasi aman di GitHub
-      - name: generate-space-shooter-gif
-        uses: platane/snk@v3
+      # Menggunakan generator invaders/space khusus untuk tema game pesawat tempur
+      - name: Generate Space Game
+        uses: kaneoki/github-contribution-invaders@v1.0.0
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-space-shooter.gif
-            dist/github-space-shooter-dark.gif?palette=github-dark
+          output_file_path: dist/github-space-shooter.gif
 
       - name: Deploy to Output Branch
         uses: peaceiris/actions-gh-pages@v3

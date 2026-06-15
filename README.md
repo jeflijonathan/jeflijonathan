@@ -33,7 +33,7 @@ Bagi saya, _coding_ bukan hanya tentang menulis baris perintah, melainkan tentan
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jeflijonathan/jeflijonathan/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Snake Game" />
+  <img src="https://raw.githubusercontent.com/jeflijonathan/jeflijonathan/output/github-space-shooter-dark.gif" width="100%" alt="Space Shooter Game" />
 </p>
 ---
 
