@@ -2,8 +2,8 @@ name: Generate Space Shooter Graph
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Berjalan otomatis setiap tengah malam
-  workflow_dispatch: # Tombol jalankan manual
+    - cron: "0 0 * * *" # Otomatis jalan setiap tengah malam
+  workflow_dispatch: # Tombol manual
 
 jobs:
   build:
@@ -11,15 +11,15 @@ jobs:
     permissions:
       contents: write
     steps:
-      # Langkah 1: Ambil library space shooter yang stabil dan ter-update
+      # Langkah 1: Gunakan action jasonlong yang valid dan terdaftar di GitHub Marketplace
       - name: generate-gh-space-shooter
-        uses: rishi-raj-jain/gh-space-shooter@v1.0.8
+        uses: jasonlong/jax-space-shooter@v1.3.0
         with:
           github_user_name: ${{ github.repository_owner }}
           output_branch: output
           output_directory: dist
 
-      # Langkah 2: Deploy hasilnya ke branch 'output'
+      # Langkah 2: Amankan hasil deploy ke branch output
       - name: Deploy to Output Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
