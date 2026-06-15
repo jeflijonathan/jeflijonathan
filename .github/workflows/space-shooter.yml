@@ -2,8 +2,8 @@ name: Generate Space Shooter Graph
 
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+    - cron: "0 0 * * *" # Berjalan otomatis setiap tengah malam
+  workflow_dispatch: # Tombol manual di tab Actions
 
 jobs:
   build:
@@ -11,40 +11,21 @@ jobs:
     permissions:
       contents: write
     steps:
-      # Langkah 1: Ambil ruang kerja dasar
+      # Langkah 1: Ambil ruang kerja dasar (Wajib agar folder dist bisa dibuat)
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Langkah 2: Setup Python (Sudah diperbaiki parameternya)
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      # Langkah 2: Jalankan kontainer resmi czl9707 dengan output terarah ke folder ./dist
+      - name: generate-gh-space-shooter
+        uses: czl9707/gh-space-shooter@v2.0.2
         with:
-          python-version: "3.10"
+          username: ${{ github.repository_owner }}
+          output-path: ./dist/github-space-shooter.gif
 
-      # Langkah 3: Sediakan library gambar
-      - name: Install Dependencies
-        run: |
-          pip install requests pillow
-
-      # Langkah 4: Ambil engine game space shooter milik czl9707
-      - name: Fetch Space Shooter Generator
-        run: |
-          curl -s https://raw.githubusercontent.com/czl9707/gh-space-shooter/main/src/gh_space_shooter/main.py -o space_shooter.py
-          sed -i 's/src\/gh_space_shooter\///g' space_shooter.py
-
-      # Langkah 5: Tembak proses pembuatan animasi pesawat
-      - name: Generate Simulation
-        run: |
-          python space_shooter.py --username ${{ github.repository_owner }} --output-path ./github-space-shooter.gif
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # Langkah 6: Amankan file GIF ke branch output
+      # Langkah 3: Deploy secara aman ke branch output menggunakan GitHub Token bawaan
       - name: Deploy to Output Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: output
-          publish_dir: ./
-          destination_dir: ./
-          keep_files: true
+          publish_dir: ./dist
