@@ -11,19 +11,18 @@ jobs:
     permissions:
       contents: write
     steps:
-      # Langkah 1: Checkout repositori utama Anda
+      # Langkah 1: Ambil kode repositori Anda
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Langkah 2: Generate game langsung ke root folder repositori
+      # Langkah 2: Generate game dengan parameter yang sudah diperbaiki (menggunakan tanda strip)
       - name: generate-gh-space-shooter
         uses: czl9707/gh-space-shooter@v2.0.2
         with:
-          github_user_name: ${{ github.repository_owner }}
-          output_branch: ${{ github.ref_name }} # Simpan langsung di branch saat ini (main)
-          output_directory: ./
+          username: ${{ github.repository_owner }}
+          output-path: ./github-space-shooter.gif
 
-      # Langkah 3: Commit dan Push kembali file yang terbuat ke branch utama
+      # Langkah 3: Commit dan Push kembali file gif yang berhasil dibuat ke branch main
       - name: Commit and Push Update
         run: |
           git config --global user.name "github-actions[bot]"
